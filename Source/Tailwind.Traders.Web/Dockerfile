@@ -7,6 +7,7 @@ FROM node:10-alpine as build-node
 WORKDIR /ClientApp
 COPY ClientApp/package.json .
 COPY ClientApp/package-lock.json .
+RUN whereis python
 RUN npm install
 COPY ClientApp/ .
 RUN npm run build
