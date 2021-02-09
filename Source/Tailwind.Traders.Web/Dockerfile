@@ -20,7 +20,7 @@ RUN cd /usr/bin \
   && ln -sf python3.5 python \
   && ln -sf python3.5-config python-config \
   && ln -sf pip3.5 pip
-RUN pip install --no-cache-dir virtualenv
+RUN pip3 install --no-cache-dir virtualenv
 RUN sudo apk add python make g++
 RUN npm install
 COPY ClientApp/ .
